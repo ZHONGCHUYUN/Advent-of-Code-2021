@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Component
 public class InputUtils {
@@ -19,6 +20,19 @@ public class InputUtils {
             intList = new ArrayList<>();
             while (scanner.hasNextLine()) {
                 intList.add(Integer.parseInt(scanner.nextLine()));
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return intList;
+    }
+
+    public static List<Integer> asIntListCommaSeparated(String fileName) {
+        try {
+            scanner = new Scanner(new File(fileName));
+            intList = new ArrayList<>();
+            if (scanner.hasNextLine()) {
+                intList = List.of(scanner.nextLine().split(",")).stream().map(Integer::parseInt).collect(Collectors.toList());
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();

@@ -20,7 +20,7 @@ public class Day1 {
 
     // answer: 1728
     public int solution_part2() {
-        list = InputUtils.asIntList("/Users/chuyunzhong/Desktop/Advent-of-Code-2021/src/main/java/com/java/resources/day1_2.txt");
+        list = InputUtils.asIntList("/Users/chuyunzhong/Desktop/Advent-of-Code-2021/src/main/java/com/java/resources/day1.txt");
         int result = 0;
         int pre = 0;
         for (int i = 0; i<list.size()-2; i++) {
