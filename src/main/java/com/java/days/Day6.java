@@ -8,6 +8,7 @@ import java.util.Map;
 
 public class Day6 {
 
+    // answer: 385391
     public int solution() {
         List<Integer> list = InputUtils.asIntListCommaSeparated("/Users/chuyunzhong/Desktop/Advent-of-Code-2021/src/main/java/com/java/resources/day6.txt");
         for (int k = 0; k<80; k++) {
@@ -26,6 +27,7 @@ public class Day6 {
         return list.size();
     }
 
+    // answer: 1728611055389
     public long solution_part2() {
         List<Integer> list = InputUtils.asIntListCommaSeparated("/Users/chuyunzhong/Desktop/Advent-of-Code-2021/src/main/java/com/java/resources/day6.txt");
         Map<Integer, Long> fish = new HashMap<>();
